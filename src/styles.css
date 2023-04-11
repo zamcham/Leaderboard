@@ -1,10 +1,65 @@
 html {
-    font-size: 62.5%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+  padding: 2vw;
+}
+
+.maincontainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.main-two-columns {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 50%;
+}
+
+.two-columns {
+  display: flex;
+}
+
+.container {
+  width: 50%;
+  padding: 0 5rem;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container input {
+  margin: 0.5rem 0;
+}
+
+.scoreboard {
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.score:nth-child(even) {
+  background-color: #c7d6d8;
+}
+
+.tc-title,
+.oc-title {
+  justify-content: space-between;
+  padding: 1rem 0;
 }
