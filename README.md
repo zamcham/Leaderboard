@@ -79,7 +79,7 @@ need to have Node.js installed
 
 👤 **Cristian "ZamCham"**
 
-- GitHub: [@zam-cham](https://github.com/zamcham)
+- GitHub: [@zamcham](https://github.com/zamcham)
 - Twitter: [@zamchamgames](https://twitter.com/zamchamgames)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/cristian-zamcham)
 
