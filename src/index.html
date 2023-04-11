@@ -7,8 +7,35 @@
     <title>Webpack Exercise</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
-    <h2>This is some test text</h2>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima sequi laudantium, incidunt placeat exercitationem cum dolorem provident, error ducimus velit atque delectus eligendi, sapiente impedit quis doloribus! Unde, placeat repellendus?</p>
+    <main>
+        <h1>Leaderboard</h1>
+    </main>
+    <section class="maincontainer">
+        <div class="main-two-columns">
+            <div class="container">
+                <div class="two-columns tc-title">
+                    <h3>Recent Scores</h3>
+                    <button>Refresh</button>
+                </div> 
+                <div class="container scoreboard">
+                    <span class="score">Name: 100</span>
+                    <span class="score">Name: 20</span>
+                    <span class="score">Name: 50</span>
+                    <span class="score">Name: 78</span>
+                    <span class="score">Name: 125</span>
+                    <span class="score">Name: 77</span>
+                    <span class="score">Name: 42</span>
+                </div>
+            </div>
+            <div class="container">
+                <h3>Add Score</h3>
+                <form>
+                    <input type="text" name="fullName" id="fullName" placeholder="Your Name">
+                    <input type="number" name="fullName" id="score" placeholder="Your Score">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
