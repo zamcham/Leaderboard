@@ -15,25 +15,19 @@
             <div class="container">
                 <div class="two-columns tc-title">
                     <h3>Recent Scores</h3>
-                    <button>Refresh</button>
+                    <button id="refreshButton">Refresh</button>
                 </div> 
-                <div class="container scoreboard">
-                    <span class="score">Name: 100</span>
-                    <span class="score">Name: 20</span>
-                    <span class="score">Name: 50</span>
-                    <span class="score">Name: 78</span>
-                    <span class="score">Name: 125</span>
-                    <span class="score">Name: 77</span>
-                    <span class="score">Name: 42</span>
+                <div class="container" id="scoreboard">
                 </div>
             </div>
             <div class="container">
                 <h3 class="oc-title">Add Score</h3>
                 <form>
                     <input type="text" name="fullName" id="fullName" placeholder="Your Name">
-                    <input type="number" name="fullName" id="score" placeholder="Your Score">
-                    <input type="submit" value="Submit">
+                    <input type="number" name="score" id="score" placeholder="Your Score">
+                    <span id="successMessage">Score successfully submitted</span>
                 </form>
+                <button id="submit">submit</button>
             </div>
         </div>
     </section>
