@@ -9,6 +9,12 @@ html {
   padding: 0;
 }
 
+button {
+  background-color: lightblue;
+  padding: 0.3rem;
+  width: 30%;
+}
+
 main {
   text-align: center;
   padding: 2vw;
@@ -45,7 +51,7 @@ main {
   margin: 0.5rem 0;
 }
 
-.scoreboard {
+#scoreboard {
   background-color: white;
   border: 2px solid black;
   display: flex;
@@ -62,4 +68,8 @@ main {
 .oc-title {
   justify-content: space-between;
   padding: 1rem 0;
+}
+
+#successMessage {
+  display: none;
 }
