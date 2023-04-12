@@ -9,6 +9,17 @@ const scoreInput = document.getElementById('score');
 const successMessage = document.getElementById('successMessage');
 const scoreboardContainer = document.getElementById('scoreboard');
 
+// Update scoreboard in UI
+const updateScoreboard = (scores) => {
+  scoreboardContainer.innerHTML = ''; // Clear existing scoreboard
+  scores.forEach((score) => {
+    const scoreElement = document.createElement('div');
+    scoreElement.classList.add('score');
+    scoreElement.textContent = `${score.user}: ${score.score}`;
+    scoreboardContainer.appendChild(scoreElement);
+  });
+};
+
 // Refresh scores
 const refreshScores = async () => {
   try {
@@ -17,8 +28,9 @@ const refreshScores = async () => {
     // Update UI with received data
     updateScoreboard(scores);
   } catch (error) {
-    console.error('Error refreshing scores:', error);
+    return error;
   }
+  return null;
 };
 
 // Submit score
@@ -37,7 +49,7 @@ const submitScoreHandler = async () => {
     await submitScore(user, score);
     // Show success message
     successMessage.style.display = 'block';
-     // Set timeout to hide success message after 3 seconds
+    // Set timeout to hide success message after 3 seconds
     setTimeout(() => {
       successMessage.style.display = 'none';
     }, 2000);
@@ -46,19 +58,9 @@ const submitScoreHandler = async () => {
     scoreInput.value = '';
     // Refresh scores
   } catch (error) {
-    console.error('Error submitting score:', error);
+    // eslint-disable-next-line consistent-return
+    return error;
   }
-};
-
-// Update scoreboard in UI
-const updateScoreboard = (scores) => {
-  scoreboardContainer.innerHTML = ''; // Clear existing scoreboard
-  scores.forEach(score => {
-    const scoreElement = document.createElement('div');
-    scoreElement.classList.add('score');
-    scoreElement.textContent = `${score.user}: ${score.score}`;
-    scoreboardContainer.appendChild(scoreElement);
-  });
 };
 
 // Event listeners

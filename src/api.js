@@ -19,9 +19,11 @@ export const submitScore = async (fullName, score) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ user: fullName, score: score }),
+      body: JSON.stringify({ user: fullName, score }),
     });
+    /* eslint-disable no-unused-vars */
     const data = await response.json();
+    /* eslint-enable no-unused-vars */
   } catch (error) {
     throw new Error('Failed to submit score');
   }
